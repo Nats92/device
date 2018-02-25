@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<title>Device</title>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+	<header class="main-header centering-wrap">
+		<a class="logo" href="index.html"><img src="img/logo.png" width="164" height="36" alt="Логотип Device"></a> 
+		<ul class="user-navigation">
+			<li class="user-navigation-item item-search">
+				<form class="search-form" action="" method="get">
+					<svg class="search-icon" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+						<path d="M15.7,14.3l-3.104-3.104C13.473,10.023,14,8.576,14,7c0-3.866-3.134-7-7-7S0,3.134,0,7s3.134,7,7,7 c1.576,0,3.023-0.527,4.193-1.404L14.3,15.7c0.185,0.184,0.38,0.3,0.7,0.3c0.553,0,1-0.447,1-1C16,14.781,15.945,14.546,15.7,14.3z M2,7c0-2.762,2.238-5,5-5s5,2.238,5,5s-2.238,5-5,5S2,9.762,2,7z"/>
+					</svg>	
+					<input class="search-field" type="search" name="search-field" placeholder="Поиск по сайту">
+					<button class="search-submit" type="submit">Найти</button>
+				</form></li>
+			<li class="user-navigation-item item-login">
+				<a class="user-nav-link login" href="login.html">Войти</a></li>
+			<li class="user-navigation-item item-compare">
+				<a class="user-nav-link compare" href="login.html">Сравнить</a></li>
+			<li class="user-navigation-item item-cart">
+				<a class="user-nav-link cart" href="login.html">Корзина</a></li>
+		</ul>
+		<ul class="main-navigation">
+			<li class="main-navigation-item first-item">
+				<a href="catalog.html" class="main-nav-link catalog-link">Каталог товаров</a>
+				<ul class="drop-down-menu">
+					<li class="drop-down-menu-column">
+						<a href="#" class="drop-down-link">Виртуальная реальность</a>
+						<a href="#" class="drop-down-link">Моноподы для селфи</a>
+						<a href="#" class="drop-down-link">Экшн-камеры</a></li>
+					<li class="drop-down-menu-column">
+						<a href="#" class="drop-down-link">Фитнес-браслеты</a>
+						<a href="#" class="drop-down-link">Умные часы</a></li>
+					<li class="drop-down-menu-column">
+						<a href="#" class="drop-down-link">Квадрокоптеры</a></li>
+				</ul></li>
+			<li class="main-navigation-item"><a href="delivery.html" class="main-nav-link">Доставка</a></li>
+			<li class="main-navigation-item"><a href="guarantee.html" class="main-nav-link">Гарантия</a></li>
+			<li class="main-navigation-item"><a href="contacts.html" class="main-nav-link">Контакты</a></li>		
+		</ul>
+	</header>
+	<div class="centering-wrap">
+		<section class="slider-wrap">
+			<ul class="slider-list">
+				<li class="slider-item" data-number="01">
+					<div class="slider-image">
+						<img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
+					</div>
+					<div class="slider-item-text">
+						<p class="slider-title">Делай селфи, <br> как Бен Стиллер!</p>
+						<p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+						<a href="catalog-item.html" class="button button-details">Подробнее</a>
+						<ul class="product-details">
+							<li class="details-item">8,5 м <span>Длина палки</span></li>
+							<li class="details-item">5 кг <span>Вес палки</span></li>
+							<li class="details-item">Карбон <span>Материал</span></li>
+						</ul>
+					</div>
+				</li>
+				<li class="slider-item hidden" data-number="02">
+					<div class="slider-image">
+						<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
+					</div>
+					<div class="slider-item-text">
+						<p class="slider-title">Худеем <br>правильно!</p>
+						<p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+						<a href="" class="button button-details">Подробнее</a>
+						<ul class="product-details">
+							<li class="details-item">48 часов <span>Без подзарядки</span></li>
+						</ul>
+					</div>
+				</li>
+				<li class="slider-item hidden" data-number="03">
+					<div class="slider-image"><img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер"></div>
+					<div class="slider-item-text">
+						<p class="slider-title">Порхает как бабочка, жалит как пчела!</p>
+						<p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+						<a href="" class="button button-details">Подробнее</a>
+						<ul class="product-details">
+							<li class="details-item">800 м<span>Дальность полета</span></li>
+							<li class="details-item">50 м <span>Радиус поражения</span></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="slider-controls-overlay">
+				<div class="slider-controls">
+					<button class="active" type="button"></button>
+					<button type="button"></button>
+					<button type="button"></button>
+				</div>
+			</div>
+		</section>
+	</div>
+	<section class="catalog-subsections centering-wrap">
+		<ul class="subsection-list">
+			<li><a href="catalog-subsection.html" class="subsection-item virtual-reality"><h3 class="catalog-subsection-title">Виртуальная реальность</h3></a></li>
+			<li><a href="catalog-subsection.html" class="subsection-item monopods"><h3 class="catalog-subsection-title">Моноподы <br> для селфи</h3></a></li>
+			<li><a href="catalog-subsection.html" class="subsection-item camera"><h3 class="catalog-subsection-title">Экшн-камеры</h3></a></li>
+			<li><a href="catalog-subsection.html" class="subsection-item fitnes"><h3 class="catalog-subsection-title">Фитнес-браслеты</h3></a></li>
+			<li><a href="catalog-subsection.html" class="subsection-item smart-watches"><h3 class="catalog-subsection-title">Умные часы</h3></a></li>
+			<li><a href="catalog-subsection.html" class="subsection-item quadrokopters"><h3 class="catalog-subsection-title">Квадрокоптеры</h3></a></li>
+		</ul>
+	</section>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
