@@ -16,6 +16,16 @@ body {
 	padding: 40px 0 0 0;
 	margin: 0;
 }
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 .button {
 	display: inline-block;
 	font-family: "Gilroy", sans-serif;
@@ -78,6 +88,8 @@ body {
 		}
 	.user-navigation {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 
 		font-family: "Open Sans", sans-serif;
 		font-size: 15px;
@@ -91,32 +103,17 @@ body {
 		padding: 0;
 		list-style: none;
 	}
-		.user-nav-link {
-			position: relative;
-			display: block;
-			font: inherit;
-			color: #000;
-			text-decoration: none;
-
-			padding: 5px 0;
-			padding-left: 26px;
-		}
-			.user-nav-link:hover,
-			.user-nav-link:focus {
-				opacity: 0.6;
-			}
-			.user-nav-link:active {
-				opacity: 0.3;
-			}
 		.user-navigation-item {
 			margin-right: 38px;
-		}
+			flex-shrink: 0;
+		}	
+			.user-navigation-item:first-child,
+			.user-navigation-item:nth-child(5n) {
+				margin-right: 100px;
+			}
 			.user-navigation-item:last-of-type {
 				margin-right: 0;
 			}
-		.user-navigation-item.item-search {
-			margin-right: 100px;
-		}
 			.search-form {
 				position: relative;
 
@@ -209,44 +206,43 @@ body {
 						display: inline-block;
 						color: rgba(255, 255, 255, 0.3);
 					}
-		.login::before {
+			.user-nav-link {
+				position: relative;
+				display: block;
+				font: inherit;
+				color: #000;
+				text-decoration: none;
+
+				padding: 5px 0;
+				padding-left: 26px;
+			}
+				.user-nav-link:hover,
+				.user-nav-link:focus {
+					opacity: 0.6;
+				}
+				.user-nav-link:active {
+					opacity: 0.3;
+				}
+		.login-icon {
 			position: absolute;
 			top: 50%;
 			margin-top: -6px;
 			left: 0;
-			content: "";
-
-			background-image: url("../img/user.svg");
-			background-repeat: no-repeat;
-			width: 12px;
-			height: 13px;
 		}
 		.user-navigation-item.item-compare {
 			margin-left: auto;
 		}
-			.compare::before {
+			.compare-icon {
 				position: absolute;
 				top: 50%;
 				margin-top: -5px;
 				left: 7px;
-				content: "";
-
-				background-image: url("../img/compare.svg");
-				background-repeat: no-repeat;
-				width: 10px;
-				height: 10px;
 			}
-		.cart::before {
+		.cart-icon {
 			position: absolute;
 			top: 50%;
 			margin-top: -5px;
 			left: 5px;
-			content: "";
-
-			background-image: url("../img/cart.svg");
-			background-repeat: no-repeat;
-			width: 12px;
-			height: 12px;
 		}
 	.main-navigation {
 		position: relative;
@@ -702,32 +698,289 @@ body {
 				margin: 0;
 			}
 .partners {
-	margin-bottom: 93px;
+	margin-bottom: 88px;
 }
-.partners-list {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	.partners-list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
+		padding: 0;
+		list-style: none;
+	}
+		.partners-item {
+			filter: grayscale(1);
+			opacity: 0.2;
+			margin-right: 40px;
+			flex-shrink: 0;
+		}
+			.partners-item:hover,
+			.partners-item:focus {
+				opacity: 1;
+				filter: none;
+			}
+			.partners-item:last-child {
+				margin-right: 0;
+			}
+.about-us-and-contacts {
+	display: flex;
+    margin-bottom: 81px;
+}
+	.in-two-columns {
+		width: 560px;
+		margin-right: 40px;
+	}
+	.in-two-columns:nth-child(2n) {
+		margin-right: 0;
+	}
+	.top-underlined-title {
+		position: relative;
+
+		font-family: "Gilroy", sans-serif;
+		font-size: 47px;
+		line-height: 47px;
+		font-weight: 800;
+		color: #000;
+
+		margin: 0;
+		padding-top: 53px;
+		padding-bottom: 43px;
+	}
+		.top-underlined-title::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 80px;
+			height: 7px;
+			background-color: #000;
+		}
+	.about-us-paragraph {
+		font-family: "Open sans", sans-serif;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: 300;
+		color: #464646;
+		letter-spacing: 0.1px;
+
+		width: 480px;
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	.about-us-paragraph:last-of-type {
+		margin-bottom: 66px;
+	}
+.transportation-companies-list {
+	margin: 0;
+    margin-bottom: 55px;
 	padding: 0;
 	list-style: none;
 }
-	.partners-item {
-		filter: grayscale(1);
-		opacity: 0.2;
-		margin-right: 40px;
-		flex-shrink: 0;
+	.transporation-companies-item {
+		position: relative;
+
+		font-family: "Gilroy", sans-serif;
+		font-size: 16px;
+		line-height: 40px;
+		font-weight: 800;
+		color: #000;
+
+		padding-left: 37px;
 	}
-		.partners-item:hover,
-		.partners-item:focus {
-			opacity: 1;
-			filter: none;
-		}
-		.partners-item:last-child {
-			margin-right: 0;
-		}
+		.transporation-companies-item::before {
+			position: absolute;
+			top: 11px;
+    		left: -3px;
 
+			content: "";
+			width: 18px;
+			height: 18px;
+			background-image: url("../img/list-style-img.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+.about-us-and-contacts .button {
+	width: 260px;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+.contacts-paragraph {
+	font-family: "Open sans", sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 300;
+	color: #464646;
+	letter-spacing: 0.1px;
 
+	margin: 0;
+	margin-bottom: 40px;
+}
+.static-map {
+	margin-bottom: 64px;
+}
+.main-footer {
+	padding: 65px 0;
+	background-color: #464646;
+}
+	.main-footer .logo-and-user-nav-wrap {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 27px;
+	}
+		.main-footer .user-navigation {
+			margin: 0;
+		}
+		.footer-logo {
+			display: inline-block;
+		}
+		.footer-logo:hover,
+		.footer-logo:focus {
+			opacity: 0.6;
+		}
+		.footer-logo:active {
+			opacity: 0.3;
+		}
+		.main-footer .user-nav-link {
+			color: #fff;
+			padding: 0;
+			padding-left: 26px;
+		}
+		.main-footer .user-navigation {
+			line-height: 27px;
+		}
+		.main-footer .user-navigation-item:first-child {
+			margin-right: 38px;
+		}
+		.main-footer .login-icon {
+			fill: #ffc600;
+		}
+		.main-footer .compare-icon {
+			fill: #ffc600;
+		}
+		.main-footer .cart-icon {
+			fill: #ffc600;
+		}
+	.navigation-and-contacts {
+		display: flex;
+		align-items: center;
+
+		font-family: "Open sans", sans-serif;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: 300;
+		color: #fff;
+
+		margin-bottom: 60px;
+	}
+	.footer-address {
+		width: 260px;
+		margin: 0;
+		margin-right: auto;
+	}
+	.footer-phone {
+	text-align: right;
+
+		width: 260px;
+		margin: 0;
+		margin-left: auto;
+	}
+	.footer-navigation {
+		display: flex;
+
+		font-family: "Gilroy", sans-serif;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 800;
+		text-transform: uppercase;
+
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		.footer-navigation-item {
+			margin-right: 36px;
+		}
+			.footer-navigation-item:last-of-type {
+				margin-right: 0;
+			}
+		.footer-nav-link {
+			font: inherit;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: 3.3px;
+		}
+			.footer-nav-link:hover,
+			.footer-nav-link:focus {
+				opacity: 0.6;
+			}
+			.footer-nav-link:active {
+				opacity: 0.3;
+			}
+.social-and-development {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.social-and-development::before {
+	content: "";
+	width: 80px;
+	height: 7px;
+	background-color: #ffc600;
+}
+	.social-list {
+		display: flex;
+
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+		flex-shrink: 0;	
+	}
+		.social-item {
+			margin-right: 20px;
+		}
+			.social-item:last-child {
+				margin-right: 0;
+			}
+		.social-link {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background-position: center center;
+			background-repeat: no-repeat; 
+			opacity: 0.3;
+		}	
+			.social-link:hover,
+			.social-link:focus {
+				opacity: 0.6;
+			}
+			.social-link:active {
+				opacity: 0.1;
+			}
+			.social-link.fb {
+				background-image: url("../img/fb-icon.svg");
+			}
+			.social-link.insta {
+				background-image: url("../img/insta-icon.svg");
+			}
+			.social-link.tw {
+				background-image: url("../img/tw-icon.svg");
+			}
+	.development {
+		display: block;
+		text-align: right;
+		width: 80px;
+	}
+		.development:hover,
+		.development:focus {
+			opacity: 0.6;
+		}
+		.development:active {
+			opacity: 0.3;
+		}
+	.academy-logo {
+		fill: #ffc600;
+	}
 .hidden {
 	display: none;
 }
