@@ -60,7 +60,8 @@ function switchSlide(slideAndButtonNumber, sliderControls, slides) {
 		})
 	})
 })();
-(function manageModalFeedback() {
+
+(function manageModalMap() {
 	var miniMap = document.querySelector(".static-map");
 	var modalMap = document.querySelector(".modal-map");
 	var closeModal = document.querySelector(".map-close");
